@@ -27,8 +27,7 @@
               "src/favicon.ico",
               "src/assets",
               "src/assets",
-              "src/404.html",
-              "src/CNAME"
+              "src/404.html"
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.css",

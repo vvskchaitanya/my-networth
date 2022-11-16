@@ -5,33 +5,9 @@ export interface User{
     role:string;
 }
 
-export interface Consultant extends User{
-    firstName:string;
-    lastName:string;
-    contact:string;
-    address:Address;
-}
-
-export interface Company extends User{
-    name:string;
-    industry:string;
-    contact:string;
-    address:Address;
-}
-
-export interface Address{
-    address:string;
-    city:string;
-    state:string;
-    country:string;
-    pincode:string;
-}
-
 export enum Role{
     USER="USER",
-    ADMIN="ADMIN",
-    COMPANY="COMPANY",
-    CONSULTANT="CONSULTANT"
+    ADMIN="ADMIN"
 }
 
 
@@ -46,12 +22,3 @@ export interface Condition{
     
 }
 
-export interface DocumentType{
-    code:string;
-    name:string
-}
-
-export const DocumentTypes:DocumentType[] = [
-    {name: "Transfer Princing", code:"TP"},
-    {name: "International Taxation", code:"IT"}
-  ]

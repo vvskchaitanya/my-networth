@@ -3,7 +3,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { ToastrService } from 'ngx-toastr';
 import { LoaderService } from '../basic/loader/loader.service';
-import { User } from '../shared/models';
+import { Role, User } from '../shared/models';
 
 @Injectable({
   providedIn: 'root'
@@ -32,9 +32,18 @@ export class FirestoreService {
       console.log("FirestoreService: Auth State Changed ",u);
       this.users?.doc(u.email).get().subscribe((a)=>{
         this.user=a.data();
-        console.log("FirestoreService: User Updated ",this.user);
-        this.loader.hide();
-        this.UserUpdateEvent.emit(this.user);
+        if(this.user==undefined){
+          this.user= {email:u.email,id:u.email,role:Role.USER}
+          this.users?.doc(u.email).set(this.user);
+          console.log("FirestoreService: User Created",this.user);
+          this.loader.hide();
+          this.UserUpdateEvent.emit(this.user);
+        }
+        else{
+          console.log("FirestoreService: User Retrieved ",this.user);
+          this.loader.hide();
+          this.UserUpdateEvent.emit(this.user);
+        }
       });
     });
   }

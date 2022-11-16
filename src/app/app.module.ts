@@ -22,6 +22,10 @@ import { MaterialModule } from './shared/material.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoaderComponent } from './basic/loader/loader.component';
 import { LoaderInterceptor } from './basic/loader/loader.interceptor';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { AssetsComponent } from './dashboard/assets/assets.component';
+import { LiabilitiesComponent } from './dashboard/liabilities/liabilities.component';
+import { NetworthComponent } from './dashboard/networth/networth.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,10 @@ import { LoaderInterceptor } from './basic/loader/loader.interceptor';
     InputComponent,
     CardComponent,
     LoginComponent,
-    LoaderComponent
+    LoaderComponent,
+    AssetsComponent,
+    LiabilitiesComponent,
+    NetworthComponent
   ],
   imports: [
     BrowserModule,

@@ -82,8 +82,5 @@ export class FirestoreService {
         break;
     }
   }
-
-  
-
   
 }

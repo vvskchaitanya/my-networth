@@ -12,7 +12,9 @@ export class LogoutComponent implements OnInit {
   constructor(private firestore:FirestoreService,private route:Router) { }
 
   ngOnInit(): void {
+    this.firestore.loader.show();
     this.firestore.auth.signOut().then(()=>{
+      this.firestore.loader.hide();
       this.firestore.toast.success("User Logged out","Logout");
       this.route.navigate(['home']);
     });

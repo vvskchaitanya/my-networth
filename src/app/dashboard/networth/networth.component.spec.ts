@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { QuickStartComponent } from './quick-start.component';
+import { NetworthComponent } from './networth.component';
 
-describe('QuickStartComponent', () => {
-  let component: QuickStartComponent;
-  let fixture: ComponentFixture<QuickStartComponent>;
+describe('NetworthComponent', () => {
+  let component: NetworthComponent;
+  let fixture: ComponentFixture<NetworthComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ QuickStartComponent ]
+      declarations: [ NetworthComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(QuickStartComponent);
+    fixture = TestBed.createComponent(NetworthComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

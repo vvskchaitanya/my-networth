@@ -19,12 +19,13 @@ import { ToastrModule } from 'ngx-toastr';
 import { LoginComponent } from './user/login/login.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { MaterialModule } from './shared/material.module';
-import { RegisterComponent } from './user/register/register.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoaderComponent } from './basic/loader/loader.component';
 import { LoaderInterceptor } from './basic/loader/loader.interceptor';
-import { QuickStartComponent } from './dashboard/quick-start/quick-start.component';
-import { ActiveWorkComponent } from './dashboard/active-work/active-work.component';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { AssetsComponent } from './dashboard/assets/assets.component';
+import { LiabilitiesComponent } from './dashboard/liabilities/liabilities.component';
+import { NetworthComponent } from './dashboard/networth/networth.component';
 
 @NgModule({
   declarations: [
@@ -37,10 +38,10 @@ import { ActiveWorkComponent } from './dashboard/active-work/active-work.compone
     InputComponent,
     CardComponent,
     LoginComponent,
-    RegisterComponent,
     LoaderComponent,
-    QuickStartComponent,
-    ActiveWorkComponent
+    AssetsComponent,
+    LiabilitiesComponent,
+    NetworthComponent
   ],
   imports: [
     BrowserModule,

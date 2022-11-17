@@ -17,7 +17,6 @@ export class LoginComponent implements OnInit {
   constructor(public auth: AngularFireAuth, public firestore: FirestoreService,public route:Router) { }
 
   ngOnInit(): void {
-    this.login();
   }
 
   login() {
